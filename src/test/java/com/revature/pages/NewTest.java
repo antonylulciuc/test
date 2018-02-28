@@ -48,12 +48,14 @@ public class NewTest {
 			driver.quit();
   }
   
-  void checkTitle(String expected) {
+  public void checkTitle(String expected) {
 		String actual = driver.getTitle();
 		testCount++;
 		String testString = "TEST " + testCount + " : ";
 		
 		Assert.assertTrue(actual.equals(expected));
+		Assert.assertEquals("b", expected);
+		Assert.assertEquals(actual, "a");
 		
 		if (!actual.equals(expected)) {
 			System.out.println(testString);
