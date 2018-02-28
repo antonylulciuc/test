@@ -53,6 +53,8 @@ public class NewTest {
 		testCount++;
 		String testString = "TEST " + testCount + " : ";
 		
+		Assert.assertTrue(actual.equals(expected));
+		
 		if (!actual.equals(expected)) {
 			System.out.println(testString);
 			System.out.println("Expected: \'" + expected + "\'");
