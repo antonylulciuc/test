@@ -46,7 +46,7 @@ public class NewTest {
 			// Always quit your driver (if exception occurs it will not close automatically)
 			driver.quit();
 	  } catch (Exception e) {
-		  Assert.assertFalse(true);
+		  Assert.assertFalse(true, e.getMessage());
 	  }
   }
   
