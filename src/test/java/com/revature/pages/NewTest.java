@@ -3,6 +3,7 @@ package com.revature.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,14 +13,17 @@ public class NewTest {
 	private static String url = "http://newtours.demoaut.com/";
 	int testCount = 0;
 	
-  @Test
+  @SuppressWarnings("deprecation")
+@Test
   public void f() {
 	  try {
 	// Set system variable to point to our chromedriver.exe 
 			System.setProperty(System.getenv("webdriver"), System.getenv("mydriver"));
+			DesiredCapabilities c = DesiredCapabilities.chrome();   
+			c.setPlatform(org.openqa.selenium.Platform.ANY);
 			
 			// Have our driver become an instance of a ChromeDriver()
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(c);
 			
 			// Launch driver are indicated url
 			driver.get(url);
@@ -46,7 +50,7 @@ public class NewTest {
 			// Always quit your driver (if exception occurs it will not close automatically)
 			driver.quit();
 	  } catch (Exception e) {
-		  Assert.assertFalse(true, e.getMessage());
+		  Assert.assertFalse(true, System.getenv("mydriver") + e.getMessage());
 	  }
   }
   
