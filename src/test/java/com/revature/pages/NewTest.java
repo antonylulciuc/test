@@ -16,7 +16,7 @@ public class NewTest {
   public void f() {
 	  try {
 	// Set system variable to point to our chromedriver.exe 
-			System.setProperty(System.getenv("webdriver"), System.getenv(System.getenv("mydriver")));
+			System.setProperty(System.getenv("webdriver"), System.getenv("mydriver"));
 			
 			// Have our driver become an instance of a ChromeDriver()
 			driver = new ChromeDriver();
