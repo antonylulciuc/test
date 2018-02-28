@@ -16,7 +16,7 @@ public class Driver {
 		MercuryLogin md;
 		WebDriverWait web;
 		// Set system variable to point to our chromedriver.exe 
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getenv("mydriver"));
 		
 		// Have our driver become an instance of a ChromeDriver()
 		driver = new ChromeDriver();
