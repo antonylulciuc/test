@@ -16,8 +16,9 @@ public class NewTest {
 	
   @Test
   public void f() {
+	  try {
 	// Set system variable to point to our chromedriver.exe 
-			System.setProperty("webdriver.chrome.driver", System.getenv("mydriver"));
+			System.setProperty(System.getenv("webdriver"), System.getenv(System.getenv("mydriver")));
 			
 			// Have our driver become an instance of a ChromeDriver()
 			driver = new ChromeDriver();
@@ -46,6 +47,9 @@ public class NewTest {
 			
 			// Always quit your driver (if exception occurs it will not close automatically)
 			driver.quit();
+	  } catch (Exception e) {
+		  Assert.assertFalse(true);
+	  }
   }
   
   public void checkTitle(String expected) {
