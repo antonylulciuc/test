@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- Root tag name can be anything -->
+<suite name="MySmokeTestSuite">
+	<test name="WhatEveryYouWant">
+		<groups>
+			<run>
+				<exclude name="regression"></exclude>
+				<include name="smoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.revature.pages.NewTest"></class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MySmokeTestSuite]">
+  <test name="WhatEveryYouWant(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <exclude name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.revature.pages.NewTest">
+        <methods>
+          <include name="f"/>
+        </methods>
+      </class> <!-- com.revature.pages.NewTest -->
+    </classes>
+  </test> <!-- WhatEveryYouWant(failed) -->
+</suite> <!-- Failed suite [MySmokeTestSuite] -->
