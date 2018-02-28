@@ -20,7 +20,7 @@ public class NewTest {
 	// Set system variable to point to our chromedriver.exe 
 			System.setProperty(System.getenv("webdriver"), System.getenv("mydriver"));
 			DesiredCapabilities c = DesiredCapabilities.chrome();   
-			c.setPlatform(org.openqa.selenium.Platform.ANY);
+			c.setPlatform(org.openqa.selenium.Platform.LINUX);
 			
 			// Have our driver become an instance of a ChromeDriver()
 			driver = new ChromeDriver(c);
