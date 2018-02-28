@@ -19,11 +19,9 @@ public class NewTest {
 	  try {
 	// Set system variable to point to our chromedriver.exe 
 			System.setProperty(System.getenv("webdriver"), System.getenv("mydriver"));
-			DesiredCapabilities c = DesiredCapabilities.chrome();   
-			c.setPlatform(org.openqa.selenium.Platform.LINUX);
 			
 			// Have our driver become an instance of a ChromeDriver()
-			driver = new ChromeDriver(c);
+			driver = new ChromeDriver();
 			
 			// Launch driver are indicated url
 			driver.get(url);
@@ -60,8 +58,6 @@ public class NewTest {
 		String testString = "TEST " + testCount + " : ";
 		
 		Assert.assertTrue(actual.equals(expected));
-		Assert.assertEquals("b", expected);
-		Assert.assertEquals(actual, "a");
 		
 		if (!actual.equals(expected)) {
 			System.out.println(testString);
